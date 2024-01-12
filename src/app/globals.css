@@ -2,26 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.wrapper {
+  display: grid;
+  grid-auto-columns: 344px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.wrapper::-webkit-scrollbar {
+  display: none;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.frame1 {
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.frame2 {
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.frame3 {
+  border-radius: 600px;
+}
+
+.frame4 {
+  border-top-left-radius: 120px;
+  border-bottom-right-radius: 120px;
 }
